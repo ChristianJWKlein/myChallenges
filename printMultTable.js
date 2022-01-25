@@ -18,7 +18,7 @@ for (let i = 1; i <= 10; i++) {
   for (let j = 1; j <= 10; j++) {
     newArray.push(j * i);
   }
-  console.log(...newArray); //takes values of the array and diplayes them
+  console.log(...newArray); //takes values of the array and diplayes them. Spread operator
 }
 
 //The below version accepts an array of any size and outputs in the same manor.

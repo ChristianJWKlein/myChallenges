@@ -10,18 +10,48 @@
  * @return {number[]}
  */
 
-const myNums = [3, 5, 77, 9, 99, 4];
-const myTarget = 108;
+//console.log()
 
-let twoSum = function (numsArr, target) {
+const myNums = [3, 8, 7, 9, 99, 4, 6];
+const myTarget = 103;
+
+let twoStep = function (numsArr, target) {
+  const result = [];
   for (let i = 0; i <= numsArr.length; i++) {
-    if ((target = numsArr[i + (i + 1)])) {
-       return numsArr.findIndex()//How to do conditional? CallBack?
-      //return indeces of numsArr where target = 8.
-      //console.log(`You hit the target ${target[i]} & ${target[i + 1]}`);
+    for (let j = i + 1; j <= numsArr.length; j++) {
+      if (target === numsArr[i] + numsArr[j]) {
+        // result.push(numsArr[i], numsArr[j]);
+        result.push(i, j); //
+      }
     }
-}
+  }
+  return result;
 };
-console.log(numsArr.findIndex(twoSum(numsArr,myTarget))
 
-//console.log(twoSum(myNums, myTarget))
+console.log(
+  twoStep(myNums, myTarget)[0] +
+    " and " +
+    twoStep(myNums, myTarget)[1] +
+    " = " +
+    myTarget
+);
+
+//Fundamentals Practice
+// const myArray = [3, 5, 6, 7, 8, 7];
+// function addArr(arr) {
+//   let sumOfThree = arr[4] + arr[3] + arr[5];
+//   if ((sumOfThree = 12)) {
+//     return [arr[5], arr[3], arr[5]];
+//   }
+//   console.log(sumOfThree);
+// }
+// console.log(addArr(myArray));
+
+// const myNums = [3, 8, 77, 9, 99, 4, 6];
+// const myTarget = 103;
+
+// for (let t of myNums) {
+
+//   }
+// }
+//console.log(t);

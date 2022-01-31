@@ -13,9 +13,9 @@
 
 //The below nested for loop creates and 2-D array of desired values above.
 
-for (let i = 1; i <= 10; i++) {
+for (let i = 1; i <= 2; i++) {
   let newArray = []; //makes array empty for every iteration of i.  So first value of array is 10th iteration of i, first of j
-  for (let j = 1; j <= 10; j++) {
+  for (let j = 1; j <= 5; j++) {
     newArray.push(j * i);
   }
   console.log(...newArray); //takes values of the array and diplayes them. Spread operator
@@ -23,16 +23,16 @@ for (let i = 1; i <= 10; i++) {
 
 //The below version accepts an array of any size and outputs in the same manor.
 
-let ranArray = [1, 3, 5, 7, 9];
+// let ranArray = [1, 3, 5, 7, 9];
 
-function nestIteration(arr) {
-  for (let i = 1; i <= arr.length; i++) {
-    let newArray = [];
-    for (let j = 1; j <= arr.length; j++) {
-      newArray.push(j * i);
-    }
-    console.log(...newArray);
-  }
-}
+// function nestIteration(arr) {
+//   for (let i = 1; i <= arr.length; i++) {
+//     let newArray = [];
+//     for (let j = 1; j <= arr.length; j++) {
+//       newArray.push(j * i);
+//     }
+//     console.log(...newArray);
+//   }
+// }
 
-nestIteration(ranArray);
+// nestIteration(ranArray);

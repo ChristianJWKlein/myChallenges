@@ -13,9 +13,9 @@
 
 //The below nested for loop creates and 2-D array of desired values above.
 
-for (let i = 1; i <= 2; i++) {
+for (let i = 1; i <= 10; i++) {
   let newArray = []; //makes array empty for every iteration of i.  So first value of array is 10th iteration of i, first of j
-  for (let j = 1; j <= 5; j++) {
+  for (let j = 1; j <= 10; j++) {
     newArray.push(j * i);
   }
   console.log(...newArray); //takes values of the array and diplayes them. Spread operator

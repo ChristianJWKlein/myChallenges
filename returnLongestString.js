@@ -52,7 +52,7 @@ let longest = namesArr.reduce((a, b) => {
 });
 
 console.log(longest);
-//notes
+
 // function longestString(arr) {
 //   let maxString = "";
 //   for (string of arr) {

@@ -40,18 +40,18 @@ const namesArr = [
 //returns the value of the array based off most occuring length of string in the array.  returns the value of the higher index based on most frequently occured string length in the array.  Not longest string.
 function longestString(arr) {
   let longest = arr.reduce((a, b) => {
-    return a.length > b.length ? a : b;
+    return a.length > b.length ? a === b : b;
   });
   return longest;
 }
 
-console.log(longestString(namesArr));
+// console.log(longestString(namesArr));
 
-let longest = namesArr.reduce((a, b) => {
-  return a.length > b.length ? a : b;
-});
+// let longest = namesArr.reduce((a, b) => {
+//   return a.length > b.length ? a : b;
+// });
 
-console.log(longest);
+// console.log(longest);
 
 // function longestString(arr) {
 //   let maxString = "";

@@ -24,14 +24,15 @@ const namesArr = [
 // }
 // console.log(longestString(namesArr));
 
-// function longestString(arr) {
-//   let longest = arr.reduce((a, b) => {
-//     return a.length > b.length ? a : a.length === b.length ? (a, b) : b;
-//   });
-//   return longest;
-// }
+function longestString(arr) {
+  let longest = arr.reduce((a, b) => {
+    //return a.length > b.length ? a : a.length === b.length ? (a, b) : b;
+    return a.length > b.length ? a : a.length === b.length ? a + " " + b : b;
+  });
+  return longest;
+}
 
-// console.log(longestString(namesArr));
+console.log(longestString(namesArr));
 
 // let longest = namesArr.reduce((a, b) => {
 //   return a.length > b.length ? a : b;
@@ -39,11 +40,11 @@ const namesArr = [
 
 // console.log(longest);
 
-function longestString(arr) {
-  let maxString = "";
-  for (string of arr) {
-    maxString = arr[Math.max(string.length)];
-  }
-  return maxString;
-}
-console.log(longestString(namesArr));
+// function longestString(arr) {
+//   let maxString = "";
+//   for (string of arr) {
+//     maxString = arr[Math.max(string.length)];
+//   }
+//   return maxString;
+// }
+// console.log(longestString(namesArr));

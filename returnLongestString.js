@@ -26,7 +26,6 @@ const namesArr = [
 
 function longestString(arr) {
   let longest = arr.reduce((a, b) => {
-    //return a.length > b.length ? a : a.length === b.length ? (a, b) : b;
     return a.length > b.length ? a : a.length === b.length ? a + " " + b : b;
   });
   return longest;

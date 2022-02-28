@@ -6,6 +6,7 @@
 //is empty string a palidrome?
 //string with 1 character?
 //string with 2 characters?
+//are spaces part of the solution?
 
 function isPalindrome(str) {
   let splitString = str.split('');
@@ -18,4 +19,13 @@ function isPalindrome(str) {
 }
 
 console.log(isPalindrome('racecar'));
-console.log('racecar');
+
+//refined
+
+// function checkPalindrome(str) {
+//   return str == str.split('').reverse().join('');
+// }
+
+// console.log(checkPalindrome('121233'));
+
+let thisString = 'thisString';

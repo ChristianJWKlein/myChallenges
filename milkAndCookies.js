@@ -2,6 +2,7 @@
 
 //example....timeForMilkAndCookies(new Date(2013, 11, 24)) ➞ true
 //Buggy. needs fixing.
+//How to access date object?
 
 let today = new Date();
 const xMasEve = new Date(2022, 11, 24);

@@ -9,23 +9,36 @@
 //Multiple ways to do this one.
 //
 
-const word1 = "aaHeEaLLaaaO";
-const word2 = "BxxOxxCxxAx xCxxOxxxDxxE";
+const word1 = 'aaHeEaLLaaaO';
+const word2 = 'BxxOxxCxxAx xCxxOxxxDxxE';
 
-function strProccesor(str) {
+// function strProccesor(str) {
+//   let newWord = [];
+
+//   for (let i = 0; i < str.length; i++) {
+//     if (str[i] == str[i].toUpperCase()) {
+//       //Says if string is true if uppper case letter present. Loop to specify by index to test characters.
+//       //console.log(str[i]);                 //Alt. method
+//       //newWord = newWord + str[i];          //method
+//       newWord.push(str[i]);
+//     }
+//   }
+//   let final = newWord.join(''); // .join("") value in the commas will be added between each array value.
+//   console.log(final);
+// }
+
+// strProccesor(word1);
+// strProccesor(word2);
+
+const strProccesor = (str) => {
   let newWord = [];
-
-  for (let i = 0; i < str.length; i++) {
-    if (str[i] == str[i].toUpperCase()) {
-      //Says if string is true if uppper case letter present. Loop to specify by index to test characters.
-      //console.log(str[i]);                 //Alt. method
-      //newWord = newWord + str[i];          //method
-      newWord.push(str[i]);
+  for (char of str) {
+    if (char == char.toUpperCase()) {
+      newWord.push(char);
     }
   }
-  let final = newWord.join(""); // .join("") value in the commas will be added between each array value.
+  let final = newWord.join('');
   console.log(final);
-}
+};
 
 strProccesor(word1);
-strProccesor(word2);

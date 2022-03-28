@@ -22,7 +22,23 @@ for (let value of myNums) {
       console.log(
         `Your target of ${myTarget} was met by adding array values of ${val} & ${value1}`
       );
+      // return;
+    }
+  }
+}
+
+function twoSum3(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    let watcher = arr[i];
+    for (let j = 1; j < arr.length; j++) {
+      if (arr[j] + watcher === target) {
+        console.log(
+          `Your target value of ${target} was met by adding ${watcher} & ${arr[j]}`
+        );
+      }
       return;
     }
   }
 }
+
+twoSum3(myNums, myTarget);

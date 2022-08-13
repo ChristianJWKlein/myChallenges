@@ -12,12 +12,14 @@ const truth = [true, true, false, false, true, false]
 
 function countTrue(arr) {
   const truthArr = arr
-  let realCounter = 0
+
   for (const val of truthArr) {
+    let fakeCount = 0
     if (val === true) {
-      realCounter = realCounter + 1
+      fakeCount += 1
+      let realCount = fakeCount + 1
     }
-    return realCounter
+    return realCount
   }
 }
 

@@ -6,6 +6,9 @@ drinks = [
   { name: 'lemonade', price: 50 },
   { name: 'lime', price: 10 },
   { name: 'tea', price: 7 },
+  { name: 'bud light', price: 5 },
+  { name: 'coors lite', price: 5 },
+  { name: 'mikes tea', price: 6 },
 ]
 
 const sortDrinkByPrice = (drinksObj) => {

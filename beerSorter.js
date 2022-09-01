@@ -11,8 +11,8 @@ drinks = [
   { name: 'mikes tea', price: 6 },
 ]
 
-const sortDrinkByPrice = (drinksObj) => {
-  let dranks = drinksObj
+const sortDrinkByPrice = (drinksArrObj) => {
+  let dranks = drinksArrObj
   dranks.sort(function (a, b) {
     return a.price - b.price
   })

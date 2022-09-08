@@ -38,4 +38,4 @@ const thePerimeter = (letter, num) => {
     : console.log('invalid input.  Enter "s" or "c", along with the number')
 }
 
-thePerimeter('s', 5)
+thePerimeter('z', 6)

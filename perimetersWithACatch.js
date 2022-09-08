@@ -29,3 +29,13 @@ const perimeter = (letter, num) => {
 perimeter('r', 4)
 
 // perimeter("c", 9) ➞ 56.52
+const thePerimeter = (letter, num) => {
+  const lett = letter
+  lett === 's'
+    ? console.log(4 * num)
+    : lett === 'c'
+    ? console.log(6.28 * num)
+    : console.log('invalid input.  Enter "s" or "c", along with the number')
+}
+
+thePerimeter('s', 5)

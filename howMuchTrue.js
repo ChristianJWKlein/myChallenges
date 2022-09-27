@@ -8,7 +8,7 @@
 
 // countTrue([]) ➞ 0
 
-const truth = [true, true, false, false, true, false]
+const truth = [true, true, false, false, true, false, true]
 
 function countTrue(arr) {
   const truthArr = arr

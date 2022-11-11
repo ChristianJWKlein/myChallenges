@@ -18,8 +18,8 @@ function countTrue(arr) {
     if (val === true) {
       fakeCount += 1
       let realCount = fakeCount + 1
+      return realCount
     }
-    return realCount
   }
 }
 

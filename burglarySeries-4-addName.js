@@ -11,8 +11,7 @@
 //Append string and value as KVP
 
 const addName = (obj, str, num) => {
-  let returnObj = obj
   return Object.assign(obj, { [str]: num })
 }
 
-console.log(addName({ piano: 500 }, 'Brutus', 400))
+console.log(addName({ piano: 500, oshkosh: 1000 }, 'Brutus', 400))

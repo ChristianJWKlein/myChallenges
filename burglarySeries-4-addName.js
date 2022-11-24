@@ -15,3 +15,4 @@ const addName = (obj, str, num) => {
 }
 
 console.log(addName({ piano: 500, oshkosh: 1000 }, 'Brutus', 400))
+console.log(addName({ sax: 600, chef: 1000 }, 'Thomas', 300))

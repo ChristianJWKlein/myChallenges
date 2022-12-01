@@ -16,6 +16,9 @@ const changeEnough = (arrOfChange, numTar) => {
   } else return false
 }
 
+//solve with for loop
+// doesn't make sense and adds more work given array data
+
 console.log(changeEnough([2, 100, 0, 0], 14.11)) // ➞ false
 
 console.log(changeEnough([0, 0, 20, 5], 0.75)) // ➞ true

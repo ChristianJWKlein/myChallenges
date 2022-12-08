@@ -8,4 +8,4 @@ const addUp = (num) => {
   return answer
 }
 
-console.log(addUp(4))
+console.log(addUp(10))

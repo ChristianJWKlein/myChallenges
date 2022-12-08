@@ -10,27 +10,36 @@ const arr = [
   { info: 40 },
   { info: 45 },
   { info: 50 },
-];
-target = 10;
+]
+target = 10
 
 for (val of arr) {
   if (val.info < target) {
-    val.info = '-';
+    val.info = '-'
   } else if (val.info > target) {
-    val.info = '+';
+    val.info = '+'
   } else {
-    val.info = '=';
+    val.info = '='
   }
 }
-
-console.log(array);
 
 for (let i = 0; i < arr.length; i++) {
   arr[i].info < target
     ? (arr[i].info = '-')
     : arr[i].info > target
     ? (arr[i].info = '+')
-    : (arr[i].info = '=');
+    : (arr[i].info = '=')
 }
 
-console.log(arr);
+console.log(arr)
+
+//rewrite as function and pass the array
+
+const targetInfoObject = (arr) => {
+  let array = arr
+  for (let i = 0; i < array.length; i++) {
+    console.log(array[i].info)
+  }
+}
+
+targetInfoObject(arr)

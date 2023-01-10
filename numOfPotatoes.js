@@ -4,8 +4,9 @@
 
 const potatoPeeler = (string) => {
   for (let char of string) {
-    switch(char){
-        case 1: 'p'
+    switch (char) {
+      case 1:
+        'p'
     }
   }
 }

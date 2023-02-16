@@ -24,7 +24,7 @@ function daysLeftInMonth(newDateToDateStr) {
     console.log(answer)
   } else if (month === 'Apr' || 'Jun' || 'Sep' || 'Nov') {
     let answer2 = 30 - day
-    console.log(answer2)
+    // console.log(answer2)
   } else {
     answer3 = 28 - day
     console.log(answer3)

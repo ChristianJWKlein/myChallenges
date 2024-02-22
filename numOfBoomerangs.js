@@ -14,8 +14,18 @@
   ]
 //returns 5 boomerangs (from left to right): [1, 7, 1], [7, 1, 7], [1, 7, 1], [7, 1, 7], and [1, 7, 1]
 
-countBoomerangs([9, 5, 9, 5, 1, 1, 1]) //➞ 2
+const countBoomerangs = (numArray) => {
+  let count = 0
+  for (let i = 0; i < numArray.length; i++) {
+    if (numArray[i] === numArray[i + 2] && numArray[i] !== numArray[i + 1]) {
+      count++
+    }
+  }
+  return `There are ${count} bommerangs in this sequence`
+}
 
-countBoomerangs([5, 6, 6, 7, 6, 3, 9]) //➞ 1
+console.log(countBoomerangs([9, 5, 9, 5, 1, 1, 1])) //➞ 2
 
-countBoomerangs([4, 4, 4, 9, 9, 9, 9]) //➞ 0
+console.log(countBoomerangs([5, 6, 6, 7, 6, 3, 9])) //➞ 1
+
+console.log(countBoomerangs([4, 4, 4, 9, 9, 9, 9])) //➞ 0

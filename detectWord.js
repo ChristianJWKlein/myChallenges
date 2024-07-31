@@ -9,8 +9,8 @@
 //Multiple ways to do this one.
 //
 
-const word1 = 'aaHeEaLLaaaO';
-const word2 = 'BxxOxxCxxAx xCxxOxxxDxxE';
+const word1 = 'aaHeEaLLaaaO'
+const word2 = 'BxxOxxCxxAx xCxxOxxxDxxE'
 
 // function strProccesor(str) {
 //   let newWord = [];
@@ -31,14 +31,15 @@ const word2 = 'BxxOxxCxxAx xCxxOxxxDxxE';
 // strProccesor(word2);
 
 const strProccesor = (str) => {
-  let newWord = [];
+  let newWord = []
   for (char of str) {
     if (char == char.toUpperCase()) {
-      newWord.push(char);
+      newWord.push(char)
     }
   }
-  let final = newWord.join('');
-  console.log(final);
-};
+  let final = newWord.join('')
+  console.log(final)
+  //add the upper case letters to an array, then use join metod to print as one string.
+}
 
-strProccesor(word1);
+strProccesor(word1)

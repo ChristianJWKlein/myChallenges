@@ -3,7 +3,20 @@
 const sentence = (arr) => {
   //   let finalSentence = ''
   let finalSentencePieces = []
-  for (let i = 0; i <= arr.length - 1; i++) {
+  let indexZeroFirstLetter = arr[0][0]
+  if (
+    indexZeroFirstLetter.includes('a') ||
+    indexZeroFirstLetter.includes('e') ||
+    indexZeroFirstLetter.includes('i') ||
+    indexZeroFirstLetter.includes('o') ||
+    indexZeroFirstLetter.includes('u')
+  ) {
+    finalSentencePieces.push(`An ${arr[0]}`)
+  } else {
+    finalSentencePieces.push(`A ${arr[0]}`)
+  }
+
+  for (let i = 1; i <= arr.length - 2; i++) {
     let firstLetter = arr[i][0]
     if (
       firstLetter.includes('a') ||
@@ -12,11 +25,25 @@ const sentence = (arr) => {
       firstLetter.includes('o') ||
       firstLetter.includes('u')
     ) {
-      finalSentencePieces.push(`An ${arr[i]}`)
+      finalSentencePieces.push(`an ${arr[i]}`)
     } else {
-      finalSentencePieces.push(`A ${arr[i]}`)
+      finalSentencePieces.push(`a ${arr[i]}`)
+    }
+
+    let indexLastFirstLetter = arr[arr.length - 1][arr.length - 1]
+    if (
+      indexLastFirstLetter.includes('a') ||
+      indexLastFirstLetter.includes('e') ||
+      indexLastFirstLetter.includes('i') ||
+      indexLastFirstLetter.includes('o') ||
+      indexLastFirstLetter.includes('u')
+    ) {
+      finalSentencePieces.push(`and an ${arr[0]}`)
+    } else {
+      finalSentencePieces.push(`and a ${arr[0]}`)
     }
   }
+
   console.log(finalSentencePieces)
 }
 

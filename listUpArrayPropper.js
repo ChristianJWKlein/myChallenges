@@ -79,3 +79,29 @@ sentence(['car', 'plane', 'truck', 'boat']) //➞ "A car, a plane, a truck and a
 //Repeat for every value in the array until the last value
 // At the last value we log "and a/an" instead of comma, then log the value with a .
 // Wrap it up in quotes
+
+// Here is how chatGPT optimized this:
+
+const sentenceGPT = (arr) => {
+  if (arr.length < 2) return // Ensures at least two nouns are provided
+
+  const isVowel = (char) => 'aeiou'.includes(char)
+
+  const formattedWords = arr.map((word, index) => {
+    const article = isVowel(word[0]) ? 'an' : 'a'
+    return index === arr.length - 1
+      ? `and ${article} ${word}.`
+      : `${article} ${word}`
+  })
+
+  const finalSentence = `${formattedWords
+    .slice(0, -1)
+    .join(', ')} ${formattedWords.at(-1)}`
+
+  console.log(finalSentence.charAt(0).toUpperCase() + finalSentence.slice(1))
+}
+
+// Examples
+sentenceGPT(['orange', 'apple', 'pear']) // "An orange, an apple and a pear."
+sentenceGPT(['keyboard', 'mouse']) // "A keyboard and a mouse."
+sentenceGPT(['car', 'plane', 'truck', 'boat']) // "A car, a plane, a truck and a boat."

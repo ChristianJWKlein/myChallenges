@@ -4,10 +4,10 @@ const sentence = (arr) => {
   //   let finalSentence = ''
   let finalSentencePieces = []
 
-  for (let i = 0; i <= arr.length - 1; i++) {
-    let firstLetter = arr[i][0]
-    console.log(i, arr.length - 1)
-    if (i === 0) {
+  arr.forEach((value, index) => {
+    // console.log(value, index)
+    let firstLetter = value[0]
+    if (index === 0) {
       if (
         firstLetter.includes('a') ||
         firstLetter.includes('e') ||
@@ -15,11 +15,11 @@ const sentence = (arr) => {
         firstLetter.includes('o') ||
         firstLetter.includes('u')
       ) {
-        finalSentencePieces.push(`An ${arr[i]}`)
+        finalSentencePieces.push(`An ${value}`)
       } else {
-        finalSentencePieces.push(`A ${arr[i]}`)
+        finalSentencePieces.push(`A ${value}`)
       }
-    } else if (i == !0 || i == !arr.length - 1) {
+    } else if (index !== 0 && index !== arr.length - 1) {
       if (
         firstLetter.includes('a') ||
         firstLetter.includes('e') ||
@@ -27,11 +27,11 @@ const sentence = (arr) => {
         firstLetter.includes('o') ||
         firstLetter.includes('u')
       ) {
-        finalSentencePieces.push(`an ${arr[i]}`)
+        finalSentencePieces.push(`an ${value}`)
       } else {
-        finalSentencePieces.push(`a ${arr[i]}`)
+        finalSentencePieces.push(`a ${value}`)
       }
-    } else if (i === arr.length - 1) {
+    } else if (index === arr.length - 1) {
       if (
         firstLetter.includes('a') ||
         firstLetter.includes('e') ||
@@ -39,14 +39,22 @@ const sentence = (arr) => {
         firstLetter.includes('o') ||
         firstLetter.includes('u')
       ) {
-        finalSentencePieces.push(`and an ${arr[i]}`)
+        finalSentencePieces.push(`and an ${value}`)
       } else {
-        finalSentencePieces.push(`and a ${arr[i]}`)
+        finalSentencePieces.push(`and a ${value}`)
       }
     }
-  }
+  })
 
-  console.log(finalSentencePieces)
+  if (finalSentencePieces.length > 1) {
+    let finalSentence =
+      finalSentencePieces.slice(0, -1).join(', ') +
+      ' ' +
+      finalSentencePieces[finalSentencePieces.length - 1]
+    console.log(finalSentence)
+  } else {
+    console.log(finalSentencePieces[0] || '')
+  }
 }
 
 // Examples

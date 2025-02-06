@@ -8,6 +8,8 @@
 // 40 steps West, now at (-10, 10)
 // ...and will end up at coordinates (-10, 10).
 
+//take this back to robotics class, and map the grid from position
+
 trackRobot(20, 30, 10, 40) //➞ [-10, 10]
 
 trackRobot() //➞ [0, 0]

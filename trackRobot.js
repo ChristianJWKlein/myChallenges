@@ -9,11 +9,25 @@
 // ...and will end up at coordinates (-10, 10).
 
 //take this back to robotics class, and map the grid from position
+//can be given any amountnof numbers and must calculate
 
-trackRobot(20, 30, 10, 40) //➞ [-10, 10]
+const trackRobot = (...distance) => {
+  let x = 0,
+    y = 0
+  for (let i = 0; i < distance.length; i++) {
+    // console.log(i % 4)
+    if (i % 4 === 0) y += distance[i]
+    if (i % 4 === 1) x += distance[i]
+    if (i % 4 === 2) y -= distance[i]
+    if (i % 4 === 3) x -= distance[i]
+  }
+  return [x, y]
+}
 
-trackRobot() //➞ [0, 0]
+console.log(trackRobot(20, 30, 10, 40)) //➞ [-10, 10]
+
+console.log(trackRobot()) //➞ [0, 0]
 // No movement means the robot stays at (0, 0).
 
-trackRobot(-10, 20, 10) //➞ [20, -20]
+console.log(trackRobot(-10, 20, 10)) //➞ [20, -20]
 // The amount to move can be negative.

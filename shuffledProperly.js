@@ -6,15 +6,17 @@
 //
 
 function isShuffledWell(arr) {
-  arr.forEach(num, index, (arr) => {
-    console.log(num, index)
+  arr.forEach((num, index, arr) => {
     if (index <= arr.length - 3) {
+      if (num + 1 === arr[index + 1] && arr[index + 1] + 1 === arr[index + 2]) {
+        return false
+      }
     }
   })
 }
 
 // Examples
-isShuffledWell([1, 2, 3, 5, 8, 6, 9, 10, 7, 4]) //➞ false
+console.log(isShuffledWell([1, 2, 3, 5, 8, 6, 9, 10, 7, 4])) //➞ false
 // 1, 2, 3 appear consecutively
 
 isShuffledWell([3, 5, 1, 9, 8, 7, 6, 4, 2, 10]) //➞ false

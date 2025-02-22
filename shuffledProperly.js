@@ -20,6 +20,7 @@
 // }
 
 const isShuffledWell = (arr) => {
+  // check the index
   arr.some((num, index) => {
     if (
       (num + 1 === arr[index + 1] && arr[index + 1] + 1 === arr[index + 2]) ||

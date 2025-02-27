@@ -5,6 +5,12 @@
 // Note that the word will be spread out amongst the random letters, but their letters remain in the same order.
 // Examples
 
+const detectWord = (word) => {
+  let lowercaseCharacters = word.match(/[a-z]/g) || []
+  let lowerCaseWord = lowercaseCharacters.join('')
+  console.log(lowerCaseWord)
+}
+
 detectWord('UcUNFYGaFYFYGtNUH') //➞ "cat"
 
 detectWord('bEEFGBuFBRrHgUHlNFYaYr') //➞ "burglar"

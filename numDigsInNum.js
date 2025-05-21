@@ -11,4 +11,4 @@ num_of_digits(12) //➞ 2
 
 num_of_digits(1305981031) //➞ 10
 
-num_of_digits(0) //➞ 1
+num_of_digits(0) //➞n 1

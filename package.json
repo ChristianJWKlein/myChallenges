@@ -1,0 +1,12 @@
+{
+  "name": "mychallenges",
+  "version": "1.0.0",
+  "description": "Each .js file within is a challenge answered without \"cheating\" by me.",
+  "main": "aEqualsB.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
